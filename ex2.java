@@ -3,44 +3,30 @@ package pacoteJava;
 import java.util.Scanner;
 
 public class ex2 {
-	public static void main(String args[])
+	public static void main (String args[])
 	{
-		int a,b,c;
 		Scanner ler = new Scanner(System.in);
 		
-		System.out.println("Entre com o A: ");
-		a=ler.nextInt();
-		System.out.println("Entre com o B: ");
-		b=ler.nextInt();
-		System.out.println("Entre com o C:");
-		c=ler.nextInt();
-		
-		if(a<b && b<c)
+		int num, contpar=0, contimp=0;
+		for(int x=1;x<=10;x++)
 		{
-			System.out.println("Ordem crescente: "+a+", "+b+" e "+c);
+			System.out.println("Digite um número: ");
+			num = ler.nextInt();
+			
+			if(num%2==0)
+			{
+				contpar++;
+			}
+			else
+			{
+				contimp++;
+			}
+			
+			System.out.println("Pares: "+contpar);
+			System.out.println("Impares: "+contimp);
 			
 		}
-		else if(a<c && c<b)
-		{
-			System.out.println("Ordem crescente: "+a+", "+c+" e "+b);
-		}
-		else if(b<a && a<c)
-		{
-			System.out.println("Ordem crescente: "+b+", "+a+" e "+c);
-		}
-		else if(b<c && c<a)
-		{
-			System.out.println("Ordem crescente: "+b+", "+c+" e "+a);
-		}
-		else if(c<a && a<b)
-		{
-			System.out.println("Ordem crescente: "+c+", "+a+" e "+b);
-		}
-		else
-		{
-			System.out.println("Ordem crescente: "+c+", "+b+" e "+a);
-		}
-				
 		
 	}
+
 }
